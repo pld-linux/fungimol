@@ -6,6 +6,7 @@ License:	LGPL
 Group:		Applications/Engineering
 Source0:	http://www.fungible.com/fungimol/%{name}-%{version}.tar.gz
 Patch0:		%{name}-shared.patch
+Patch1:		%{name}-static-init.patch
 URL:		http://www.fungible.com/fungimol/index.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:	netpbm-devel
@@ -24,6 +25,7 @@ Donald Brenner's Fortran molecular dynamics package is also included.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} fullbuild CPLUSPLUS=%{__cxx} %{!?debug:NDEBUG=yes}
