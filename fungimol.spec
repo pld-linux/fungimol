@@ -7,6 +7,7 @@ Release:	1
 License:	LGPL
 Group:		Applications/Engineering
 Source0:	http://www.fungible.com/fungimol/%{name}-%{version}.tar.gz
+# Source0-md5:	f1bc872b74c62a7bbdf8f1729ccacb46
 Patch0:		%{name}-shared.patch
 Patch1:		%{name}-static-init.patch
 URL:		http://www.fungible.com/fungimol/index.html
