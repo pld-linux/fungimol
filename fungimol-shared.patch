@@ -1,0 +1,51 @@
+diff -urN fungimol-0.5.1.org/mk/common.mk fungimol-0.5.1/mk/common.mk
+--- fungimol-0.5.1.org/mk/common.mk	Fri Mar  7 21:54:18 2003
++++ fungimol-0.5.1/mk/common.mk	Fri Mar  7 22:00:16 2003
+@@ -68,10 +68,10 @@
+ PPMLIBPATH:=/usr/lib
+ export PPMLIBPATH
+ PPMLINKOPTS:=
+-ifneq ($(wildcard $(PPMLIBPATH)/libppm.a),)
++ifneq ($(wildcard $(PPMLIBPATH)/libppm.so),)
+    PPMLINKOPTS += -lppm
+ else
+-   ifneq ($(wildcard $(PPMLIBPATH)/libnetppm.a),)
++   ifneq ($(wildcard $(PPMLIBPATH)/libnetppm.so),)
+       PPMLINKOPTS += -lnetppm
+    else
+       -include stopNOPPM
+@@ -81,10 +81,10 @@
+ 	 @exit 1
+    endif
+ endif
+-ifneq ($(wildcard $(PPMLIBPATH)/libpgm.a),)
++ifneq ($(wildcard $(PPMLIBPATH)/libpgm.so),)
+    PPMLINKOPTS += -lpgm
+ else
+-   ifneq ($(wildcard $(PPMLIBPATH)/libnetpgm.a),)
++   ifneq ($(wildcard $(PPMLIBPATH)/libnetpgm.so),)
+       PPMLINKOPTS += -lnetpgm
+    else
+       -include stopNOPGM
+@@ -94,10 +94,10 @@
+ 	 @exit 1
+    endif
+ endif
+-ifneq ($(wildcard $(PPMLIBPATH)/libpbm.a),)
++ifneq ($(wildcard $(PPMLIBPATH)/libpbm.so),)
+    PPMLINKOPTS += -lpbm
+ else
+-   ifneq ($(wildcard $(PPMLIBPATH)/libnetpbm.a),)
++   ifneq ($(wildcard $(PPMLIBPATH)/libnetpbm.so),)
+       PPMLINKOPTS += -lnetpbm
+    else
+       -include stopNOPBM
+@@ -113,7 +113,7 @@
+ # Dynamic linking is better for debugging because the link ought to be faster.
+ # Except it's broken right now with the new gcc.
+ ifdef NDEBUG
+-   LINKOPTS += -Xlinker -Bstatic
++   LINKOPTS += -Xlinker 
+ endif
+ LINKOPTS += -lXext -lX11 -lm $(PPMLINKOPTS)
+ ifdef NDEBUG
