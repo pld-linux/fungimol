@@ -1,6 +1,6 @@
 # TODO: fix %%doc location
 Summary:	An extensible system for designing atomic-scale objects
-Summary(pl):	Rozszerzalny system do projektowania obiektów o skali atomu
+Summary(pl.UTF-8):   Rozszerzalny system do projektowania obiektÃ³w o skali atomu
 Name:		fungimol
 Version:	0.5.1
 Release:	1
@@ -25,14 +25,14 @@ molecular dynamics force field.
 
 Donald Brenner's Fortran molecular dynamics package is also included.
 
-%description -l pl
-Celem tego projektu jest ewentualne rozszerzenie, aby by³ przydatnym
-systemem do wykonywania prac zwi±zanych z projektami z dziedziny
-nanotechnologii molekularnej. W tej chwili mo¿na przegl±daæ pliki PDB,
-modyfikowaæ Buckminsterfullerine; ma wtyczk± do obliczania si³
+%description -l pl.UTF-8
+Celem tego projektu jest ewentualne rozszerzenie, aby byÅ‚ przydatnym
+systemem do wykonywania prac zwiÄ…zanych z projektami z dziedziny
+nanotechnologii molekularnej. W tej chwili moÅ¼na przeglÄ…daÄ‡ pliki PDB,
+modyfikowaÄ‡ Buckminsterfullerine; ma wtyczkÄ… do obliczania siÅ‚
 dynamiki molekularnej Brennera.
 
-Do³±czony jest tak¿e pakiet dynamiki molekularnej w Fortranie Donalnda
+DoÅ‚Ä…czony jest takÅ¼e pakiet dynamiki molekularnej w Fortranie Donalnda
 Brennera.
 
 %prep
