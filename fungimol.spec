@@ -1,6 +1,6 @@
 # TODO: fix %%doc location
 Summary:	An extensible system for designing atomic-scale objects
-Summary(pl.UTF-8):   Rozszerzalny system do projektowania obiektów o skali atomu
+Summary(pl.UTF-8):	Rozszerzalny system do projektowania obiektów o skali atomu
 Name:		fungimol
 Version:	0.5.1
 Release:	1
